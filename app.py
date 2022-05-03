@@ -17,7 +17,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_classifieds")
 def get_classifieds():
-    classifieds = mongo.db.jokes.find()
+    classifieds = mongo.db.classifieds.find()
     return render_template("tasks.html", classifieds=classifieds)
 
 if __name__ == "__main__":
