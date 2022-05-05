@@ -13,23 +13,30 @@
     {% endblock %}
     <title>Base Template</title>
     <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <div class="nav-wrapper text-shadow light-blue darken-1">
+          <a href="{{ url_for('get_classifieds')}}" class="brand-logo">Logo</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
+            <li><a href="#">DiveSpot Jobs</a></li>
+            <li><a href="#">The App</a></li>
+            <li><a href="#">Dive Map</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Log In</a></li>
+
+
           </ul>
         </div>
       </nav>
     
       <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><h4 class="center-align.light-blue-text.text-darken">Dive Spot</h4></li>
+        <li><a href="{{ url_for('get_classifieds')}}">DiveSpot Jobs</a></li>
+        <li><a href="#">The App</a></li>
+        <li><a href="#">Dive Map</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Log Out</a></li>
+        <li><a href="#">Log In</a></li>
       </ul>
 </head>
 <body>
