@@ -21,7 +21,7 @@ def get_classifieds():
     classifieds = mongo.db.classifieds.find()
     return render_template("tasks.html", classifieds=classifieds)
 
-@app.route("/register", methods["GET","POST"])
+@app.route("/register", methods=["GET","POST"])
 def register():
     return render_template("register.html")
 
