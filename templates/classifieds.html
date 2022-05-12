@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>classifieds</h2>
+    {% for job in classifieds %}
+        {{ job.description }}<br>
+        <!-- {{ job.email }}
+        {{ job.description }} -->
+    {% endfor %}
+{% endblock %}

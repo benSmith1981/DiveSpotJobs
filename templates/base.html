@@ -18,7 +18,7 @@
   <header>
     <nav class="nav-extended text-shadow light-blue darken-1">
       <div class="nav-wrapper text-shadow light-blue darken-1">
-        <a href="{{ url_for('get_classifieds')}}" class="brand-logo">Logo</a>
+        <a href="{{ url_for('get_tasks')}}" class="brand-logo">Logo</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#">DiveSpot Jobs</a></li>
@@ -26,7 +26,7 @@
           <li><a href="#">Dive Map</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Log Out</a></li>
-          <li><a href="#">Log In</a></li>
+          <li><a href="{{ url_for('login')}}">Log In</a></li>
           <li><a href="{{ url_for('register')}}">Register</a></li>
 
 
@@ -36,12 +36,12 @@
   
     <ul class="sidenav" id="mobile-demo">
       <li><h4 class="center-align.light-blue-text.text-darken">Dive Spot</h4></li>
-      <li><a href="{{ url_for('get_classifieds')}}">DiveSpot Jobs</a></li>
+      <li><a href="{{ url_for('get_tasks')}}">DiveSpot Jobs</a></li>
       <li><a href="#">The App</a></li>
       <li><a href="#">Dive Map</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Log Out</a></li>
-      <li><a href="#">Log In</a></li>
+      <li><a href="{{ url_for('login')}}">Log In</a></li>
       <li><a href="{{ url_for('register')}}">Register</a></li>
     </ul>
             

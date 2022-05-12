@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>I am extending the base template</h2>
-    {% for job in classifieds %}
-        {{ job.description }}<br>
-        <!-- {{ job.email }}
-        {{ job.description }} -->
+    <h2>Tasks</h2>
+    {% for task in tasks %}
+        {{ task.task_description }}<br>
+        {{ task.task_name }}
     {% endfor %}
 {% endblock %}
