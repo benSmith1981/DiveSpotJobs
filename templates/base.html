@@ -23,7 +23,7 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="#">DiveSpot Jobs</a></li>
           <li><a href="#">The App</a></li>
-          <li><a href="#">Dive Map</a></li>
+          <li><a href="{{ url_for('profile',username=session['user']) }}">Profile</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Log Out</a></li>
           <li><a href="{{ url_for('login')}}">Log In</a></li>
@@ -38,7 +38,7 @@
       <li><h4 class="center-align.light-blue-text.text-darken">Dive Spot</h4></li>
       <li><a href="{{ url_for('get_tasks')}}">DiveSpot Jobs</a></li>
       <li><a href="#">The App</a></li>
-      <li><a href="#">Dive Map</a></li>
+      <li><a href="{{ url_for('profile',username=session['user']) }}">Profile</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Log Out</a></li>
       <li><a href="{{ url_for('login')}}">Log In</a></li>
@@ -46,6 +46,16 @@
     </ul>
             
   </header>
+    {% with messages = get_flashed_messages() %}
+      <!-- {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %} -->
+          <li>{{ messages }}</li>
+        <!-- {% endfor %}
+        </ul>
+      {% endif %} -->
+    {% endwith %}
+
     <h1>Im part of base template</h1>
     {% block content %}
     {% endblock %}
