@@ -52,20 +52,23 @@
     </ul>
             
   </header>
-    {% with messages = get_flashed_messages() %}
-      <!-- {% if messages %}
-        <ul class=flashes>
-        {% for message in messages %} -->
-          <li>{{ messages }}</li>
-        <!-- {% endfor %}
-        </ul>
-      {% endif %} -->
-    {% endwith %}
+    <section>
+      <!-- flash messages -->
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              {% for message in messages %}
+                  <div class="row flashes">
+                      <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+                  </div>
+              {% endfor %}
+          {% endif %}
+      {% endwith %}
+    </section>
 
-    <h1>Im part of base template</h1>
-    {% block content %}
-    {% endblock %}
-
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
